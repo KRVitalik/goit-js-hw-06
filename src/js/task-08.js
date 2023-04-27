@@ -7,8 +7,14 @@ registerForm.addEventListener("submit", (event) => {
   
   const { email, password } = event.currentTarget;
 
-  if (email.value === '') { window.alert(emptyEmail) }
-  else if (password.value === '') { window.alert(emptyPassword) }
+  if (email.value === '') {
+    window.alert(emptyEmail);
+    return;
+  }
+  else if (password.value === '') {
+    window.alert(emptyPassword);
+    return
+  }
   
   const elements = {
     email: email.value,
